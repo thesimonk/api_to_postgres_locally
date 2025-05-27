@@ -50,7 +50,7 @@ def load_to_postgres(df, table_name):
         db_host = os.getenv("DB_HOST")
         db_port = os.getenv("DB_PORT")
         db_name = os.getenv("DB_NAME")
-        db_schema = os.getenv("DB_SCHEMA", "public")
+        db_schema = os.getenv("DB_SCHEMA")
 
         engine = create_engine(
             f'postgresql+psycopg2://{db_user}:{db_password}@{db_host}:{db_port}/{db_name}'
